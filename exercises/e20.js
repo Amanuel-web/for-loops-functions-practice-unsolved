@@ -14,7 +14,7 @@ export function separateNamesWithAFromRest(array) {
     for (let j = 0; j < array[i].length; j++) {
       if (array[i][j].toLowerCase() === "a") {
         nameContainsA = true;
-        break; // Break the inner loop if 'a' is found
+        break;
       }
     }
 

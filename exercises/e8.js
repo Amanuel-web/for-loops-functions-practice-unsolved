@@ -6,7 +6,7 @@
 export function getClientWithGreatestBalance(array) {
   // Your code goes here...
   if (array.length === 0) {
-    return []; // Return an empty array for an empty input array
+    return [];
   }
 
   let highestAccount = array[0];
@@ -17,7 +17,7 @@ export function getClientWithGreatestBalance(array) {
     }
   }
 
-  return [highestAccount]; // Return as an array
+  return [highestAccount];
 }
 
 // === TEST YOURSELF ===

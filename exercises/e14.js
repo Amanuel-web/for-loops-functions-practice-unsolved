@@ -11,21 +11,17 @@ export function getClientsWithWrongBalance(array) {
   for (let i = 0; i < array.length; i++) {
     let calculatedBalance = 0;
 
-    // Sum deposits if they exist
     if (array[i].deposits && array[i].deposits.length > 0) {
       for (let j = 0; j < array[i].deposits.length; j++) {
         calculatedBalance += array[i].deposits[j];
       }
     }
-
-    // Subtract withdrawals if they exist
     if (array[i].withdrawals && array[i].withdrawals.length > 0) {
       for (let j = 0; j < array[i].withdrawals.length; j++) {
         calculatedBalance -= array[i].withdrawals[j];
       }
     }
 
-    // Check if the calculated balance matches the recorded balance
     if (calculatedBalance !== array[i].balance) {
       incorrectBalanceAccounts.push(array[i]);
     }
