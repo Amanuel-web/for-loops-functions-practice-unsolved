@@ -26,7 +26,14 @@ export function getAverage(array) {
 
 export function getStringSum(str) {
   // Your code goes here...
-  return (str.match(/\d/g) || []).reduce((acc, num) => acc + Number(num), 0);
+  const digits = str.match(/\d/g) || [];
+  let sum = 0;
+
+  for (let i = 0; i < digits.length; i++) {
+    sum += Number(digits[i]);
+  }
+
+  return sum;
 }
 
 // === TEST YOURSELF ===

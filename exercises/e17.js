@@ -6,11 +6,16 @@
 
 export function doesArrayInclude(array, value) {
   // Your code goes here...
-  if (array.includes(value)) {
-    return true;
-  } else {
-    return false;
+  let itHave = false;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === value) {
+      itHave = true;
+      break;
+    } else {
+      itHave = false;
+    }
   }
+  return itHave;
 }
 
 // === TEST YOURSELF ===
